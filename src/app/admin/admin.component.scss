@@ -1,0 +1,32 @@
+.admin {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .mat-mdc-form-field {
+        font-size: 14px;
+        width: 90%;
+    }    
+
+    &-title {
+        color: white;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+    &-students {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        &-table {
+            width: 90%;
+
+            table {
+                border: 1px solid gainsboro;
+                border-radius: 3px;
+            }
+        }
+    }
+}
