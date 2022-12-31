@@ -9,8 +9,12 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    loadChildren: () => import('./admin/admin.module').then((m) => m.AdminModule)
+    loadChildren: () => import('./pages/admin/admin.module').then((m) => m.AdminModule)
   },
+  {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then((m) => m.HomeModule)
+  }
 ];
 
 @NgModule({
