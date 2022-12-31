@@ -1,16 +1,26 @@
-.container {
-    background-color: teal;
-    min-height: 100vh;
-    width: 100%;
-    
-    &-toolbar{
+.appComponent {
+    &-toolbar {
         background-color: black;
         color: white;
         height: 6rem;
         font-size: 25px;
+
+        &-sidenavClosed {
+            cursor: pointer;
+        }
     }
 
-    &-router {
-        margin: 2rem;
+    &-container {
+        background-color: teal;
+        min-height: 100vh;
+        width: 100%;
+
+        &-sidenav {
+            padding: 20px;
+        }
+
+        &-sidenavContent {
+            height: 100%;
+        }
     }
 }

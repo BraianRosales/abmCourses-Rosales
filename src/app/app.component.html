@@ -1,8 +1,28 @@
-<div class="container">
-    <mat-toolbar class="container-toolbar">
+<div class="appComponent">
+    <mat-toolbar class="appComponent-toolbar">
+        <div *ngIf="!showFiller">
+            <span class="material-icons appComponent-toolbar-sidenavClosed" (click)="drawer.toggle(); openClosed()">
+                menu
+            </span>
+        </div>
+        <span *ngIf="showFiller" class="material-icons appComponent-toolbar-sidenavClosed"
+            (click)="drawer.toggle();  openClosed()">
+            menu_open
+        </span>
         <span>Courses House</span>
     </mat-toolbar>
-    <div class="container-router">
-        <router-outlet></router-outlet>
-    </div>
+
+    <mat-drawer-container class="appComponent-container" autosize>
+        <mat-drawer #drawer class="appComponent-container-sidenav" mode="side">
+            <button mat-raised-button>
+                Toggle extra text
+            </button>
+        </mat-drawer>
+
+        <div class="appComponent-container-sidenavContent">
+            <div class="container">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </mat-drawer-container>
 </div>

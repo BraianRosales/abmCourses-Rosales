@@ -27,8 +27,6 @@ export class AdminService {
   constructor(private http: HttpClient) { }
 
   getStudents(): Observable<Student[]> {
-    console.log(this.studentsList);
-
     return this.studentsList;
   }
 }

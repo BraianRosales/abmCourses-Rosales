@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'abmCourses-Rosales';
+  showFiller = false;
+
+  openClosed() {
+    return this.showFiller ? this.showFiller = false : this.showFiller = true;
+  }
 }
