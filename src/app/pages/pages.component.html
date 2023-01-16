@@ -1,0 +1,53 @@
+<div class="pages">
+    <!-- Toolbar -->
+    <mat-toolbar class="pages-toolbar">
+        <div *ngIf="!showFiller">
+            <span class="material-icons pages-toolbar-iconClosed" (click)="drawer.toggle(); openClosed()">
+                menu
+            </span>
+        </div>
+        <span *ngIf="showFiller" class="material-icons pages-toolbar-iconOpen" (click)="drawer.toggle();  openClosed()">
+            menu_open
+        </span>
+        <span>ABM Estudiantes</span>
+    </mat-toolbar>
+    <!-- Contenido del Sidenav -->
+    <mat-drawer-container class="pages-container" autosize>
+        <mat-drawer #drawer class="pages-container-sidenav" mode="side">
+            <div class="pages-container-sidenav-ul">
+                <div class="pages-container-sidenav-ul-li">
+                    <span class="material-icons pages-container-sidenav-ul-li-icon">
+                        admin_panel_settings
+                    </span>
+                    <span [routerLink]="['/main/admin']" class="pages-container-sidenav-ul-li-info">Admin</span>
+                </div>
+                <div class="pages-container-sidenav-ul-li">
+                    <span class="material-icons">
+                        drive_file_rename_outline
+                    </span>
+                    <span [routerLink]="['/main/alumnos-editados']"
+                        class="pages-container-sidenav-ul-li-info">Editados</span>
+                </div>
+                <div class="pages-container-sidenav-ul-li">
+                    <span class="material-icons">
+                        person_remove
+                    </span>
+                    <span [routerLink]="['/main/alumnos-eliminados']"
+                        class="pages-container-sidenav-ul-li-info">Eliminados</span>
+                </div>
+                <div class="pages-container-sidenav-ul-li">
+                    <span class="material-icons">
+                        person_add
+                    </span>
+
+                    <span [routerLink]="['/main/alumnos-nuevos']"
+                        class="pages-container-sidenav-ul-li-info">Nuevos</span>
+                </div>
+            </div>
+        </mat-drawer>
+        <!-- Paginas -->
+        <div class="pages-container-sidenavContent">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-container>
+</div>

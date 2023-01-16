@@ -1,9 +1,9 @@
 <div class="admin">
     <h1 class="admin-title">Administrador de Alumnos</h1>
-    <mat-form-field>
-        <mat-label>Buscar Alumno..</mat-label>
-        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
-    </mat-form-field>
+    <div class="admin-search">
+        <input matInput (keyup)="applyFilter($event)" placeholder="Buscar alumno.." #input>
+        <button mat-raised-button color="primary">Agregar</button>
+    </div>
     <div class="admin-students">
         <div class="admin-students-table">
             <table mat-table [dataSource]="dataSource">
@@ -36,7 +36,7 @@
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
                 <tr class="mat-row" *matNoDataRow>
-                    <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+                    <td class="mat-cell" colspan="4">No se encontraron resultados para "{{input.value}}"</td>
                 </tr>
             </table>
         </div>

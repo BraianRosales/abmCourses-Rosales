@@ -1,0 +1,78 @@
+.pages {
+    &-toolbar {
+        background-color: #4f85e7;
+        color: white;
+        height: 6rem;
+        font-size: 25px;
+        display: flex;
+        gap: 1rem;
+
+        &-iconClosed {
+            color: #f3a8a8;
+            margin-top: 8px;
+            cursor: pointer;
+            font-size: 35px;
+        }
+
+        // &-iconClosed:hover {
+        //     color: darkblue;
+        // }
+
+        &-iconOpen {
+            color: #f3a8a8;
+            margin-top: 0px;
+            cursor: pointer;
+            font-size: 35px;
+        }
+
+        // &-iconOpen:hover {
+        //     color: #e1e1ff;
+        // }
+    }
+
+    &-container {
+        background-color: #fdfdfd;
+        min-height: 100vh;
+        width: 100%;
+
+        &-sidenav {
+            width: 12rem;
+            padding: 10px;
+            background-color: cornflowerblue;
+
+            &-ul {
+                margin-top: 1rem;
+                color: ghostwhite;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 1rem;
+                padding-left: 1rem;
+
+                &-li {
+                    cursor: pointer;
+                    font-size: 18px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+
+                    &-icon {
+                        color: floralwhite;
+                    }
+
+                    &-info {
+                        margin-top: 2px;
+                    }
+                }
+            }
+        }
+
+        &-sidenavContent {
+            height: 100%;
+            padding: 2rem;
+            color: black;
+        }
+    }
+}

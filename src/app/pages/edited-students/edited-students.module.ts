@@ -1,24 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminComponent } from './admin.component';
+import { EditedStudentsComponent } from './edited-students.component';
 import { RouterModule, Routes } from '@angular/router';
-import { SharedModule } from '../../@shared/shared.module';
+import { SharedModule } from 'src/app/@shared/shared.module';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+
 
 const routes: Routes = [
   {
     path: '',
-    component: AdminComponent
+    component: EditedStudentsComponent
   }
 ]
 
 @NgModule({
   declarations: [
-    AdminComponent
+    EditedStudentsComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     SharedModule,
+    CKEditorModule,
   ],
 })
-export class AdminModule { }
+export class EditedStudentsModule { }
